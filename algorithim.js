@@ -38,7 +38,7 @@
             case('/'):
                 let calculation = prevNumber / currentNumber;
                 if(calculation == 0){
-                    throw("Error");
+                    throw("Divide by zero error");
                 }
             break;
             case('--'):
