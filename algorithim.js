@@ -3,7 +3,8 @@
 //I need a clear function to clear all data 
 
 class calculator{
-    private double prevNumber;
+    private:
+    double prevNumber;
     double currentNumber;
 
     public:
