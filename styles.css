@@ -1,7 +1,14 @@
-div {
+.outer {
     width: 200px;
     height: 200px;
     border: solid;
     background-color: gray;
-    text-align: center;
+    padding: 10px;
+}
+
+.inner {
+    width: 200px;
+    height: 25px;
+    border: solid;
+    background-color: white;
 }
