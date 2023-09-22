@@ -8,7 +8,6 @@
         this.currentNumber = currentNumber;
         prevNumber = 0.0;
         currentNumber = 0.0;
-        clear;
     }
 
     clear = function(prevNumber, currentNumber){
@@ -16,8 +15,8 @@
         currentNumber = 0.0;
     }
 
-    append = function(value){
-        const value = 0;
+    append = function(currentNumber, value){
+        value = 0;
         currentNumber = currentNumber + value;
         return currentNumber;
     }
@@ -52,7 +51,10 @@
             break;
         }
     }
-    
+
     }
 
+    calculator = new calculator();
+    calculator.append(6);
+    console.log(calculator.calculate('+'));
     
