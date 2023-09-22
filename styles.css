@@ -19,3 +19,8 @@
     border: solid;
     background-color: white;
 }
+
+#cbutton {
+    color: white;
+    background-color: red;
+}
