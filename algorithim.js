@@ -15,10 +15,18 @@ class calculator{
 
     append(){
         //append to the end of a vector or an array
+        while(let x != '='){
+            //vector.pushback(x)
+            if(x == '='){
+                break;
+            }
+        }
+        
         
     }
 
-    calculate(){
+    calculate(prevnumber, currentNumber){
+
         //create a switch case that goes over +, -, x, /, and division by zero error
     }
 
