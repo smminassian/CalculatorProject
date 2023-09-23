@@ -14,7 +14,7 @@
     }
 
     append(value){
-        value = 0;
+        const value = 0;
         this.currentNumber = this.currentNumber + value;
         return this.currentNumber;
     }
@@ -26,12 +26,15 @@
         switch(operation){
             case('+'):
                 return this.prevNumber + this.currentNumber;
+                
             break;
             case('-'):
                 return this.prevNumber + this.currentNumber;
+
             break;
             case('*'):
                 return this.prevNumber * this.currentNumber;
+
             break;
             case('/'):
                 let calculation = this.prevNumber / this.currentNumber;
@@ -57,5 +60,4 @@
     const calc = new calculator();
     calculator.append(6);
     console.log(calculator.calculate('+'));
-    console.log()
     
