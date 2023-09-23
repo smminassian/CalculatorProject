@@ -1,6 +1,24 @@
 //Problem: I need to get my calculator to work.
 //SmallerProblem: I need to set up my class and set up the functions I will use(Get it check by professor or tutor)
 //I need a clear function to clear all data(Completed)
+
+/*If this is the problem, I can do class 
+Calculator(prev, current){
+    prev = prevNumber;
+    current = currentNumber;
+
+    This matches initalizing constructor in c++
+
+    or i can take all of the function code out of the class and just say:
+    calculator(){
+        stuff
+    }
+    clear();
+    append(number: value);
+    calculate();
+                                    
+
+*/
 'use strict';
     class calculator{
         calculator(){
@@ -26,7 +44,7 @@
         switch(operation){
             case('+'):
                 return this.prevNumber + this.currentNumber;
-                
+
             break;
             case('-'):
                 return this.prevNumber + this.currentNumber;
