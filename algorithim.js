@@ -3,43 +3,42 @@
 //I need a clear function to clear all data(Completed)
 'use strict';
     class calculator{
-        calculator = function(prevNumber, currentNumber){
-        this.prevNumber = prevNumber;
-        this.currentNumber = currentNumber;
-        prevNumber = 0.0;
-        currentNumber = 0.0;
+        calculator(){
+        this.prevNumber = 0.0
+        this.currentNumber = 0.0
     }
 
-    clear = function(prevNumber, currentNumber){
-        prevNumber = 0.0;
-        currentNumber = 0.0;
+    clear(){
+        this.prevNumber = 0.0;
+        this.currentNumber = 0.0;
     }
 
-    append = function(currentNumber, value){
+    append(value){
         value = 0;
-        currentNumber = currentNumber + value;
-        return currentNumber;
+        this.currentNumber = this.currentNumber + value;
+        return this.currentNumber;
     }
 
 
-    calculate = function(prevNumber, currentNumber){
+    calculate(){
         //create a switch case that goes over +, -, x, /, and division by zero error
         let operation = '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//';
         switch(operation){
             case('+'):
-                return prevNumber + currentNumber;
+                return this.prevNumber + this.currentNumber;
             break;
             case('-'):
-                return prevNumber + currentNumber;
+                return this.prevNumber + this.currentNumber;
             break;
             case('*'):
-                return prevNumber * currentNumber;
+                return this.prevNumber * this.currentNumber;
             break;
             case('/'):
-                let calculation = prevNumber / currentNumber;
-                if(calculation == 0){
+                let calculation = this.prevNumber / this.currentNumber;
+                if(this.currentNumber == 0){
                     throw("Divide by zero error");
                 }
+                
             break;
             case('--'):
             break;
@@ -49,12 +48,14 @@
             break;
             case('//'):
             break;
-        }
+                
+        }        
     }
-
     }
+    
 
-    calculator = new calculator();
+    const calc = new calculator();
     calculator.append(6);
     console.log(calculator.calculate('+'));
+    console.log()
     
