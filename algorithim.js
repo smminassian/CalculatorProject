@@ -27,7 +27,6 @@ Calculator(prev, current){
         currentNumber = 0.0;
     }
 
-
     clear(){
         prevNumber = 0.0;
         currentNumber = 0.0;
@@ -53,11 +52,11 @@ Calculator(prev, current){
             
             break;
             case('/'):
-                if(calc.currentNumber == 0){
+                if(currentNumber == 0){
                     throw("Divide by zero error");
                 }
                 else{
-                    return calc.prevNumber / calc.currentNumber;
+                    return prevNumber / currentNumber;
                 }
             
             case('--'):
