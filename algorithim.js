@@ -21,7 +21,7 @@ Calculator(prev, current){
     New issue is to figure out why it keeps saying NaN
 
 
-    My code runs perfectly i just need to fix ++, --, //, and **. Also I need to see why break; says its undetected
+    My code has a bug it only does +
 */
 'use strict';
     class calculator{
@@ -37,12 +37,44 @@ Calculator(prev, current){
 
     append(value){
         this.currentNumber = this.currentNumber + value;
-        return this.currentNumber;
+        return this.currentNumber; 
+          //This function is where the error is. Its always adding because when I say calc.append(6), current number = 6 
+        //but when i say calc.append(2) 6 goes to value and then 2 goes to current number
     }
 
-    calculate(){
+    calculate(operation){
 
-        let operation = '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//';
+        //prev number is never being updated
+        if(operation === '+'){
+            return this.prevNumber + this.currentNumber;
+        }
+        else if(operation === '-'){
+            return this.prevNumber - this.currentNumber;
+        }
+        else if(operation === '*'){
+            return this.prevNumber * this.currentNumber;
+        }
+        else if(operation === '/'){
+            if(this.currentNumber != 0){
+                return this.prevNumber / this.currentNumber;
+            }
+            else{
+                alert("Error");
+            }
+        }
+        else if(operation === '++'){
+            alert("Error");
+        }
+        else if(operation === '--'){
+            alert("Error");
+        }
+        else if(operation === '**'){
+            alert("Error");
+        }
+        else if(operation === '//'){
+            alert("Error");
+        }
+        
     //     switch(operation){
     //         case('+'):
     //             return this.prevNumber + this.currentNumber;
@@ -83,8 +115,10 @@ Calculator(prev, current){
     }
     const calc = new calculator();
     
-    calc.append(6);
-    calc.append(2);
-    calc.append(3);
-    console.log(calc.calculate('-')); 
+    calc.append(2); 
+    calc.append(4);
+    console.log(calc.prevNumber);
+    console.log(calc.currentNumber);
+    console.log(calc.calculate('/')); 
+    
     
