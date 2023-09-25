@@ -32,7 +32,7 @@ Calculator(prev, current){
     }
 
     append(value){
-        const value = 0;
+        //
         this.currentNumber = this.currentNumber + value;
         return this.currentNumber;
     }
@@ -44,19 +44,16 @@ Calculator(prev, current){
         switch(operation){
             case('+'):
                 return this.prevNumber + this.currentNumber;
-
-            break;
+                
             case('-'):
                 return this.prevNumber + this.currentNumber;
 
-            break;
             case('*'):
                 return this.prevNumber * this.currentNumber;
 
-            break;
             case('/'):
                 let calculation = this.prevNumber / this.currentNumber;
-                if(this.currentNumber == 0){
+                if(this.currentNumber === 0){
                     throw("Divide by zero error");
                 }
                 
@@ -76,6 +73,6 @@ Calculator(prev, current){
     
 
     const calc = new calculator();
-    calculator.append(6);
-    console.log(calculator.calculate('+'));
+    calc.append(6);
+    console.log(calc.calculate('+'));
     
