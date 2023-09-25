@@ -58,7 +58,7 @@ Calculator(prev, current){
                 else{
                     return this.prevNumber / this.currentNumber;
                 }
-                
+            
             case('--'):
             break;
             case('++'):
