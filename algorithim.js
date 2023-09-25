@@ -44,13 +44,16 @@ Calculator(prev, current){
         switch(operation){
             case('+'):
                 return this.prevNumber + this.currentNumber;
-
+                
+            break;
             case('-'):
                 return this.prevNumber - this.currentNumber;
-
+            
+            break;
             case('*'):
                 return this.prevNumber * this.currentNumber;
-
+            
+            break;
             case('/'):
                 if(this.currentNumber == 0){
                     throw("Divide by zero error");
