@@ -19,6 +19,9 @@ Calculator(prev, current){
                                     
 
     New issue is to figure out why it keeps saying NaN
+
+
+    My code runs perfectly i just need to fix ++, --, //, and **. Also I need to see why break; says its undetected
 */
 'use strict';
     class calculator{
