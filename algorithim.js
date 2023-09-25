@@ -18,6 +18,7 @@ Calculator(prev, current){
     calculate();
                                     
 
+    New issue is to figure out why it keeps saying NaN
 */
 'use strict';
     class calculator{
@@ -52,7 +53,7 @@ Calculator(prev, current){
                 return this.prevNumber * this.currentNumber;
 
             case('/'):
-                if(this.currentNumber === 0){
+                if(this.currentNumber == 0){
                     throw("Divide by zero error");
                 }
                 else{
@@ -72,8 +73,10 @@ Calculator(prev, current){
     }
     }
     
-
+    
     const calc = new calculator();
+    
     calc.append(6);
     console.log(calc.calculate('+'));
+    console.log(calc.currentNumber);
     
