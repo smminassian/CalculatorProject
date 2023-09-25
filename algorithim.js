@@ -44,7 +44,7 @@ Calculator(prev, current){
         switch(operation){
             case('+'):
                 return this.prevNumber + this.currentNumber;
-                
+
             case('-'):
                 return this.prevNumber + this.currentNumber;
 
@@ -52,12 +52,13 @@ Calculator(prev, current){
                 return this.prevNumber * this.currentNumber;
 
             case('/'):
-                let calculation = this.prevNumber / this.currentNumber;
                 if(this.currentNumber === 0){
                     throw("Divide by zero error");
                 }
+                else{
+                    return this.prevNumber / this.currentNumber;
+                }
                 
-            break;
             case('--'):
             break;
             case('++'):
