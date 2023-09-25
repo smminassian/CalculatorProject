@@ -61,12 +61,16 @@ Calculator(prev, current){
                 }
             
             case('--'):
+                 throw("Error: too many arguments");
             break;
             case('++'):
+                throw("Error: too many arguments");
             break;
             case('**'):
+                 throw("Error: too many arguments");
             break;
             case('//'):
+                    throw("Error: too many arguments");
             break;
                 
         }        
@@ -75,6 +79,7 @@ Calculator(prev, current){
     const calc = new calculator();
     
     calc.append(6);
+    calc.append(2);
+    calc.append(3);
     console.log(calc.calculate('+'));
-    console.log(calc.currentNumber);
     
