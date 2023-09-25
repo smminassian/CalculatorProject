@@ -38,7 +38,6 @@ Calculator(prev, current){
         return calc.currentNumber;
     }
         calculate(){
-        //create a switch case that goes over +, -, x, /, and division by zero error
         let operation = '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//';
         switch(operation){
             case('+'):
