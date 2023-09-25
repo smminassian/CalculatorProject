@@ -59,20 +59,20 @@ Calculator(prev, current){
                 return this.prevNumber / this.currentNumber;
             }
             else{
-                alert("Error");
+                console.log("Error");
             }
         }
         else if(operation === '++'){
-            alert("Error");
+            console.log("Error");
         }
         else if(operation === '--'){
-            alert("Error");
+            console.log("Error");
         }
         else if(operation === '**'){
-            alert("Error");
+            console.log("Error");
         }
         else if(operation === '//'){
-            alert("Error");
+            console.log("Error");
         }
         
     //     switch(operation){
