@@ -22,44 +22,43 @@ Calculator(prev, current){
 */
 'use strict';
     class calculator{
-        calculator(){
-        this.prevNumber = 0.0
-        this.currentNumber = 0.0
+        constructor(){
+        prevNumber = 0.0;
+        currentNumber = 0.0;
     }
 
+
     clear(){
-        this.prevNumber = 0.0;
-        this.currentNumber = 0.0;
+        prevNumber = 0.0;
+        currentNumber = 0.0;
     }
 
     append(value){
-        this.currentNumber = this.currentNumber + value;
-        return this.currentNumber;
+        currentNumber = currentNumber + value;
+        return calc.currentNumber;
     }
-
-
-    calculate(){
+        calculate(){
         //create a switch case that goes over +, -, x, /, and division by zero error
         let operation = '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//';
         switch(operation){
             case('+'):
-                return this.prevNumber + this.currentNumber;
+                return prevNumber + currentNumber;
                 
             break;
             case('-'):
-                return this.prevNumber - this.currentNumber;
+                return prevNumber - currentNumber;
             
             break;
             case('*'):
-                return this.prevNumber * this.currentNumber;
+                return prevNumber * currentNumber;
             
             break;
             case('/'):
-                if(this.currentNumber == 0){
+                if(calc.currentNumber == 0){
                     throw("Divide by zero error");
                 }
                 else{
-                    return this.prevNumber / this.currentNumber;
+                    return calc.prevNumber / calc.currentNumber;
                 }
             
             case('--'):
@@ -73,9 +72,7 @@ Calculator(prev, current){
                 
         }        
     }
-    }
-    
-    
+}
     const calc = new calculator();
     
     calc.append(6);
