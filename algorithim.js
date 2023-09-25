@@ -25,44 +25,42 @@ Calculator(prev, current){
 */
 'use strict';
     class calculator{
-        constructor(prev, current){
-        this.prevNumber = prev
-        this.currentNumber = current;
-        prev = 0.0;
-        current = 0.0;
+        constructor(){
+        this.prevNumber = 0.0;
+        this.currentNumber = 0.0;
     }
 
     clear(){
-       prev = 0;
-       current = 0;
+        this.prevNumber = 0.0;
+        this.currentNumber = 0.0;
     }
 
     append(value){
-        current = current + value;
-        return current;
+        this.currentNumber = this.currentNumber + value;
+        return this.currentNumber;
     }
 
     calculate(){
         let operation = '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//';
         switch(operation){
             case('+'):
-                return prev + current;
+                return this.prevNumber + this.currentNumber;
                 
             break;
             case('-'):
-                return prev - current;
+                return this.prevNumber - this.currentNumber;
             
             break;
             case('*'):
-                return prev * current;
+                return this.prevNumber * this.currentNumber;
             
             break;
             case('/'):
-                if(current == 0){
+                if(this.currentNumber == 0){
                     throw("Divide by zero error");
                 }
                 else{
-                    return prev / current;
+                    return this.prevNumber / this.currentNumber;
                 }
             
             case('--'):
