@@ -23,40 +23,41 @@ Calculator(prev, current){
 'use strict';
     class calculator{
         constructor(){
-        prevNumber = 0.0;
-        currentNumber = 0.0;
+        this.prevNumber = 0.0;
+        this.currentNumber = 0.0;
     }
 
     clear(){
-        prevNumber = 0.0;
-        currentNumber = 0.0;
+        this.prevNumber = 0.0;
+        this.currentNumber = 0.0;
     }
 
     append(value){
-        currentNumber = currentNumber + value;
-        return calc.currentNumber;
+        this.currentNumber = this.currentNumber + value;
+        return this.currentNumber;
     }
-        calculate(){
+
+    calculate(){
         let operation = '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//';
         switch(operation){
             case('+'):
-                return prevNumber + currentNumber;
+                return this.prevNumber + this.currentNumber;
                 
             break;
             case('-'):
-                return prevNumber - currentNumber;
+                return this.prevNumber - this.currentNumber;
             
             break;
             case('*'):
-                return prevNumber * currentNumber;
+                return this.prevNumber * this.currentNumber;
             
             break;
             case('/'):
-                if(currentNumber == 0){
+                if(this.currentNumber == 0){
                     throw("Divide by zero error");
                 }
                 else{
-                    return prevNumber / currentNumber;
+                    return this.prevNumber / this.currentNumber;
                 }
             
             case('--'):
