@@ -33,7 +33,6 @@ Calculator(prev, current){
     }
 
     append(value){
-        //
         this.currentNumber = this.currentNumber + value;
         return this.currentNumber;
     }
@@ -47,7 +46,7 @@ Calculator(prev, current){
                 return this.prevNumber + this.currentNumber;
 
             case('-'):
-                return this.prevNumber + this.currentNumber;
+                return this.prevNumber - this.currentNumber;
 
             case('*'):
                 return this.prevNumber * this.currentNumber;
