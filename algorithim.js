@@ -118,8 +118,6 @@ Calculator(prev, current){
     
     calc.append(2); 
     calc.append(4);
-    console.log(calc.prevNumber);
-    console.log(calc.currentNumber);
-    console.log(calc.calculate('/')); 
+    console.log(calc.calculate('**')); 
     
     
