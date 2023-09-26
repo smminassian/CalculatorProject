@@ -36,7 +36,8 @@ Calculator(prev, current){
     }
 
     append(value){
-        this.currentNumber = this.currentNumber + value;
+        this.prevNumber = this.currentNumber
+        this.currentNumber = value;
         return this.currentNumber; 
           //This function is where the error is. Its always adding because when I say calc.append(6), current number = 6 
         //but when i say calc.append(2) 6 goes to value and then 2 goes to current number
