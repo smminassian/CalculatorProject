@@ -74,44 +74,7 @@ Calculator(prev, current){
         }
         else if(operation === '//'){
             console.log("Error");
-        }
-        
-    //     switch(operation){
-    //         case('+'):
-    //             return this.prevNumber + this.currentNumber;
-                
-    //         break;
-    //         case('-'):
-    //             return this.prevNumber - this.currentNumber;
-            
-    //         break;
-    //         case('*'):
-    //             return this.prevNumber * this.currentNumber;
-            
-    //         break;
-    //         case('/'):
-    //             if(this.currentNumber == 0){
-    //                 throw("Divide by zero error");
-    //             }
-    //             else{
-    //                 return this.prevNumber / this.currentNumber;
-    //             }
-            
-    //         case('--'):
-    //              throw("Error: too many arguments");
-    //         break;
-    //         case('++'):
-    //             throw("Error: too many arguments");
-    //         break;
-    //         case('**'):
-    //              throw("Error: too many arguments");
-    //         break;
-    //         case('//'):
-    //                 throw("Error: too many arguments");
-    //         break;
-                
-    //     }        
-    // }
+    }
 }
     }
     const calc = new calculator();
