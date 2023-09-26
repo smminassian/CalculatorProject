@@ -56,6 +56,6 @@
     
     calc.append(2); 
     calc.append(4);
-    console.log(calc.calculate('**')); 
+    console.log(calc.calculate('+')); 
     
     
