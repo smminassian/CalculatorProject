@@ -53,14 +53,18 @@
     }
     const calc = new calculator();
 
-    const number = document.querySelectorAll(".number");
-    number.addEventListener("number").forEach(number => {number.addEventListener("click", calc.append(value))});
-    const Operation = document.querySelectorAll(".Operation");
-    Operation.addEventListener("Operation").forEach(Operation => {Operation.addEventListener("click", calc.append(value))});
-    const clear = document.querySelector(".clear")
-    clear.addEventListener("clear").forEach(clear => {clear.addEventListener("click", calc.clear())});
+    // const number = document.querySelectorAll(".number");
+    // number.addEventListener("number").forEach(number => {number.addEventListener("click", calc.append(value))});
+    // const Operation = document.querySelectorAll(".Operation");
+    // Operation.addEventListener("Operation").forEach(Operation => {Operation.addEventListener("click", calc.append(value))});
+    // const clear = document.querySelector(".clear")
+    // clear.addEventListener("clear").forEach(clear => {clear.addEventListener("click", calc.clear())});
     //Tomorrow we wil change operation, clear, and number to id and we will figure out how to get our buttons to work. We will use get element by ID
-
+    function myAppendFunction(value){
+        if(value != NaN){
+            calc.append(value);
+        }
+    }
 
     calc.append(2); 
     calc.append(4);

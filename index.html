@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastien's Calculator</title>
 </head>
-<script src="algorithim.js"></script>
 <body>
     <div class = "outer">
         <div class = "inner"></div>
-            <button class = "number">7</button>
-                <button class = "number">8</button>
-                    <button class = "number">9</button>
+            <button class = "number" onclick="myAppendFunction(7)">7</button>
+                <button class = "number" onclick = "myAppendFunction(8)">8</button>
+                    <button class = "number" onclick="myAppendFunction(9)">9</button>
                         <button class = "Operation">+</button>
                         <br>
-                            <button class = "number">4</button>
-                                <button class = "number"> 5</button>
-                                    <button class = "number">6</button>
+                            <button class = "number" onclick = "myAppendFunction(4)">4</button>
+                                <button class = "number" onclick = "myAppendFunction(5)"> 5</button>
+                                    <button class = "number" onclick="myAppendFunction(6)">6</button>
                                         <button class = "Operation">-</button>
                                     <br>
-                                <button class = "number">1</button>
-                             <button class = "number">2</button>
-                        <button class = "number">3</button>
+                                <button class = "number" onclick="myAppendFunction(1)">1</button>
+                             <button class = "number" onclick = "myAppendFunction(2)">2</button>
+                        <button class = "number" onclick = "myAppendFunction(3)">3</button>
                     <button class = "Operation">x</button>
                 <br>
             <button class = "clear">c</button>
@@ -30,6 +29,7 @@
     <button class = "Operation">=</button>
 <button class = "Operation">/</button>
 
+<script src="algorithim.js"></script>
     </div>
 </body>
 </html>
