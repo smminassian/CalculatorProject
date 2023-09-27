@@ -1,16 +1,14 @@
 .outer {
     width: 200px;
-    height: 120px;
+    height: 100px;
     border: solid;
     background-color: gray;
     padding: 10px;
 }
 
-.inner {
+input {
     width: 200px;
-    height: 25px;
     border: solid;
-    background-color: white;
 }
 
 .button {
