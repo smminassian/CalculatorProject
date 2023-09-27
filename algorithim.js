@@ -3,20 +3,20 @@
 
     class calculator{
         constructor(){
-        this.prevNumber = 0.0;
-        this.currentNumber = 0.0;
+        this.prevNumber = '';
+        this.currentNumber = '';
     }
 
     clear(){
         this.prevNumber = '';
         this.currentNumber = '';
-        display();
+        display(this.currentNumber);
     }
 
     append(value){
         this.prevNumber = this.currentNumber
-        this.currentNumber = value;
-        display();
+        this.currentNumber = number(value);
+        display(this.currentNumber);
         return this.currentNumber; 
     }
 
@@ -54,15 +54,12 @@
 }
     }
     const calc = new calculator();
-     // const number = document.querySelectorAll(".number");
-    // number.addEventListener("number").forEach(number => {number.addEventListener("click", calc.append(value))});
-    // const Operation = document.querySelectorAll(".Operation");
-    // Operation.addEventListener("Operation").forEach(Operation => {Operation.addEventListener("click", calc.append(value))});
-    // const clear = document.querySelector(".clear")
-    // clear.addEventListener("clear").forEach(clear => {clear.addEventListener("click", calc.clear())});
-    //Tomorrow we wil change operation, clear, and number to id and we will figure out how to get our buttons to work. We will use get element by ID
+    const OperationButton = document.querySelectorAll("Operation")
+    OperationButton.addEventListener("Operation").forEach(button => {button.addEventListener("Click", Operation())});
     function Operation(){
-        if()
+        const val = 
+
+        
         
     }
 
@@ -70,13 +67,15 @@
         calc.clear();
     }
 
-    function myAppendFunction(value){
-       if(value != NaN){
-        calc.append(value);
+    function myAppendFunction(){
+        const append = document.getElementById("number");
+        const val = append.value;
+       if(val != NaN){
+        calc.append(val);
        }
     }
 
-    function display(){
+    function display(value){
         const input = document.getElementById('inputBox');
         if(value != NaN){
             input.value = calc.currentNumber
