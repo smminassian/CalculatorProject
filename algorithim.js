@@ -87,7 +87,8 @@
     function display(value){
         const input = document.getElementById('inputBox');
         if(value != NaN){
-            input.value = calc.currentNumber
+           calc.currentNumber = input.innerHTML;
+           input.innerHTML = value;
         }
     }
     
