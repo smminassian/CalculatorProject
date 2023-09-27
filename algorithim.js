@@ -1,5 +1,5 @@
-//Problem: I need to get my calculator to work.
-//SmallerProblem: I need to set up my class and set up the functions I will use(Get it check by professor or tutor)
+//Problem: I need to get my calculator to work.(Completed)
+//SmallerProblem: I need to set up my class and set up the functions I will use(Completed)
 //I need a clear function to clear all data(Completed)
 'use strict';
     class calculator{
