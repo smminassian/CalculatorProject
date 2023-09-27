@@ -74,7 +74,7 @@
 
     function myAppendFunction(){
 
-       if(val != NaN){
+       if(!isNaN(val)){
         calc.append(val);
         display(val);
        }
@@ -87,8 +87,7 @@
     function display(value){
         const input = document.getElementById('inputBox');
         if(value != NaN){
-           calc.currentNumber = input.innerHTML;
-           input.innerHTML = value;
+            input.value = value;
         }
     }
     
