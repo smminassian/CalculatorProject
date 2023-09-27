@@ -59,7 +59,7 @@
     const OperationButton = document.querySelectorAll(".Operation");
 
 
-    OperationButton.addEventListener(".Operation").forEach(Operation => {Operation.addEventListener("onclick", Operation(val))}); //for each instance of class operation it adds onclick
+    OperationButton.addEventListener(".Operation").forEach(Operation => {Operation.addEventListener("click", Operation(val))}); //for each instance of class operation it adds click
 
     function Operation(val){
         if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){
@@ -70,7 +70,7 @@
         
     }
 
-    numberButton.addEventListener(".number").forEach(number => {number.addEventListener("onclick", myAppendFunction())});
+    numberButton.addEventListener(".number").forEach(number => {number.addEventListener("click", myAppendFunction())});
 
     function myAppendFunction(){
 
