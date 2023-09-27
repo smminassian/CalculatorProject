@@ -15,7 +15,7 @@
 
     append(value){
         this.prevNumber = this.currentNumber
-        this.currentNumber = number(value);
+        this.currentNumber = Number(value);
         display(this.currentNumber);
         return this.currentNumber; 
     }
@@ -70,6 +70,7 @@
     }
 
     numberButton.addEventListener(".number").forEach(number => {number.addEventListener("onclick", myAppendFunction())});
+
     function myAppendFunction(){
        
        if(val != NaN){
