@@ -55,7 +55,7 @@
     }
     const calc = new calculator();
 
-    // const numberButton = document.querySelectorAll(".number");
+     const numberButton = document.querySelectorAll(".number");
     // const OperationButton = document.querySelectorAll(".Operation");
 
 
@@ -72,7 +72,17 @@
         
     }
 
-    // numberButton.addEventListener(".number").forEach(number => {number.addEventListener("click", myAppendFunction())});
+    numberButton.addEventListener(".number").forEach(number => { // adding for all. Taking all numbers from index.html
+        const append = document.querySelector(".number"); // It is only looking at line 14 on index.html
+        const val = append.value;
+       if(!isNaN(val)){
+        calc.append(val);
+        display(val);
+       }
+    }
+
+
+    
 
     function myAppendFunction(){
         const append = document.querySelector(".number"); // It is only looking at line 14 on index.html
