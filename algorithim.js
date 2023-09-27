@@ -55,11 +55,11 @@
     }
     const calc = new calculator();
 
-    const numberButton = document.querySelectorAll(".number");
-    const OperationButton = document.querySelectorAll(".Operation");
+    // const numberButton = document.querySelectorAll(".number");
+    // const OperationButton = document.querySelectorAll(".Operation");
 
 
-    OperationButton.addEventListener(".Operation").forEach(Operation => {Operation.addEventListener("click", Operation(val))}); //for each instance of class operation it adds click
+    // OperationButton.addEventListener(".Operation").forEach(Operation => {Operation.addEventListener("click", Operation(val))}); //for each instance of class operation it adds click
 
     function Operation(val){
         if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){
@@ -70,7 +70,7 @@
         
     }
 
-    numberButton.addEventListener(".number").forEach(number => {number.addEventListener("click", myAppendFunction())});
+    // numberButton.addEventListener(".number").forEach(number => {number.addEventListener("click", myAppendFunction())});
 
     function myAppendFunction(){
 
