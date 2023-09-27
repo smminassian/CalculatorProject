@@ -54,25 +54,32 @@
 }
     }
     const calc = new calculator();
-    const OperationButton = document.querySelectorAll("Operation")
-    OperationButton.addEventListener("Operation").forEach(button => {button.addEventListener("Click", Operation())});
-    function Operation(){
-        const val = 
 
+    const numberButton = document.querySelectorAll(".number");
+    const OperationButton = document.querySelectorAll(".Operation");
+
+
+    OperationButton.addEventListener(".Operation").forEach(Operation => {Operation.addEventListener("onclick", Operation())});
+
+    function Operation(){
+        const Op = Operation.textContent;
+        const push = calc.calculate(Op);
+        display(push);
         
         
+    }
+
+    numberButton.addEventListener(".number").forEach(number => {number.addEventListener("onclick", myAppendFunction())});
+    function myAppendFunction(){
+       
+       if(val != NaN){
+        calc.append(val);
+        display(val);
+       }
     }
 
     function setClear(){
         calc.clear();
-    }
-
-    function myAppendFunction(){
-        const append = document.getElementById("number");
-        const val = append.value;
-       if(val != NaN){
-        calc.append(val);
-       }
     }
 
     function display(value){
