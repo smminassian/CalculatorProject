@@ -11,25 +11,25 @@
        
         <input type = "text" id = "inputBox" >
         <br>
-            <button class = "number">7</button>
-                <button class = "number">8</button>
-                    <button class = "number">9</button>
-                        <button class = "Operation">+</button>
+          <button class = "number" onclick="myAppendFunction()" value = '8'>7</button>
+                <button class = "number" onclick = "myAppendFunction()" value = '8'>8</button>
+                    <button class = "number" onclick="myAppendFunction()" value = '9'>9</button>
+                        <button class = "Operation" onclick="Operation()" value = '+'>+</button>
                         <br>
-                            <button class = "number">4</button>
-                                <button class = "number"> 5</button>
-                                    <button class = "number">6</button>
-                                        <button class = "Operation">-</button>
-                                    <br>
-                                <button class = "number">1</button>
-                             <button class = "number">2</button>
-                        <button class = "number">3</button>
-                    <button class = "Operation">x</button>
-                <br>
-            <button class = "clear">c</button>
-        <button class = "number">0</button>
-    <button class = "equals">=</button>
-<button class = "Operation">/</button>
+                            <button class = "number" onclick = "myAppendFunction()" value = '4'>4</button>
+                                <button class = "number" onclick = "myAppendFunction()" value = '5'> 5</button>
+                                    <button class = "number" onclick="myAppendFunction()" value = '6'>6</button>
+                                         <button class = "Operation" onclick = "Operation()" value = '-'>-</button>
+                                         <br>
+                                    <button class = "number" onclick="myAppendFunction()" value = '1'>1</button>
+                                <button class = "number" onclick = "myAppendFunction()" value = '2'>2</button>
+                            <button class = "number" onclick = "myAppendFunction()" value = '3'>3</button>
+                        <button class = "Operation" onclick = "Operation()" value = 'x'>x</button>
+                    <br>
+                <button id = "clear" onclick = "setClear()" value = 'c'>c</button>
+        <button class = "number" onclick="myAppendFunction(0)" value = '0'>0</button>
+    <button class = "equals" value = '='>=</button>
+<button class = "Operation" onclick = "Operation()" value = '/'>/</button>
 
 <script src="algorithim.js"></script>
     </div>
