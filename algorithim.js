@@ -32,7 +32,7 @@
             return this.prevNumber * this.currentNumber;
         }
         else if(operation === '/'){
-            if(this.currentNumber != 0){
+            if(this.currentNumber !== 0){
                 return this.prevNumber / this.currentNumber;
             }
             else{
