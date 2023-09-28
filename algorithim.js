@@ -17,34 +17,33 @@
     }
 
     append(value){
-        this.prevNumber = this.currentNumber.toString() + this.prevNumber.toString();
-        this.currentNumber = this.currentNumber.toString() + value.toString()
-        //display(this.currentNumber);
+        this.prevNumber = this.currentNumber
+        this.currentNumber = Number(value);
+        display(this.currentNumber);
         return this.currentNumber;
     }
 
     calculate(operation){
-        const prev = Number(this.prevNumber);
-        const current = Number(this.currentNumber);
+       
 
-        if(!isNaN(prev) && !isNaN(current)){
-             if(operation === '+'){
-            return prev + current;
-            }
-            else if(operation === '-'){
-            return prev - current;
-          }
-            else if(operation === '*'){
-            return prev * current;
-             }
-            else if(operation === '/'){
-            if((current) !== 0){
-                return prev / current;
-            }
-            else{
-                console.log("Error");
-            }
+         if(operation === '+'){
+            return this.prevNumber + this.currentNumber;
+        }
+        else if(operation === '-'){
+            return this.prevNumber - this.currentNumber;
+        }
+        else if(operation === '*'){
+            return this.prevNumber * this.currentNumber;
+        }
+        else if(operation === '/'){
+            if((this.currentNumber) !== 0){
+                return this.prevNumber / this.currentNumber;
            }
+           else{
+            console.log("error");
+           }
+        }
+        
             else if(operation === '++'){
             console.log("Error");
             }
@@ -60,52 +59,48 @@
       
     }
    }
-}
+
     
     const calc = new calculator();
 
-    calc.append(8);
-    calc.append(7);
-    console.log(calc.calculate('+'));
-
+    
     
     
 
-    // const numberButton = document.querySelectorAll(".number");
-    // const OperationButton = document.querySelectorAll(".Operation");
+    const numberButton = document.querySelectorAll(".number");
+    const OperationButton = document.querySelectorAll(".Operation");
 
 
-    //  OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
+     OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
 
-    //  function Operation(val){
-    //     if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
-    //     const result = calc.calculate(val);
-    //     display(val);
-    //     display(result);
-    //  }
-    // }
+     function Operation(val){
+        if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
+        const result = calc.calculate(val);
+        display(result);
+     }
+    }
 
-    // numberButton.addEventListener(".number").forEach(button => {button.addEventListener("click", myAppendFunction(val))});
+    numberButton.addEventListener(".number").forEach(button => {button.addEventListener("click", myAppendFunction(val))});
                                                                                    
-    // function myAppendFunction(val){
-    //    if(!isNaN(val)){
-    //     calc.append(val);
-    //     display(val);
-    //    }
+    function myAppendFunction(val){
+       if(!isNaN(val)){
+        calc.append(val);
+        display(val);
+       }
 
-    // }
+    }
 
-    // function setClear(){
-    //     calc.clear();
-    //     display(calc.currentNumber);
-    // }
+    function setClear(){
+        calc.clear();
+        display(calc.currentNumber);
+    }
 
-    // function display(value){
-    //     const input = document.getElementById('inputBox');
-    //     if(value != NaN){
-    //         input.value = calc.currentNumber;
-    //     }
-    // }
+    function display(value){
+        const input = document.getElementById('inputBox');
+        if(value != NaN){
+            input.value = value;
+        }
+     }
     
     
     
