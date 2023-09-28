@@ -17,27 +17,25 @@
     }
 
     append(value){
-        this.prevNumber = this.currentNumber
-        this.currentNumber = Number(value);
+        this.prevNumber = this.prevNumber.toString() + this.currentNumber.toString();
+        this.currentNumber = this.currentNumber.toString() + value.toString()
         display(this.currentNumber);
         return this.currentNumber;
     }
 
     calculate(operation){
-       
-
          if(operation === '+'){
-            return this.prevNumber + this.currentNumber;
+            return Number(this.prevNumber) + Number(this.currentNumber);
         }
         else if(operation === '-'){
-            return this.prevNumber - this.currentNumber;
+            return Number(this.prevNumber) - Number(this.currentNumber);
         }
         else if(operation === '*'){
-            return this.prevNumber * this.currentNumber;
+            return Number(this.prevNumber) * Number(this.currentNumber);
         }
         else if(operation === '/'){
-            if((this.currentNumber) !== 0){
-                return this.prevNumber / this.currentNumber;
+            if((Number(this.currentNumber)) != 0){
+                return Number(this.prevNumber) / Number(this.currentNumber);
            }
            else{
             console.log("error");
@@ -64,9 +62,6 @@
     const calc = new calculator();
 
     
-    
-    
-
     const numberButton = document.querySelectorAll(".number");
     const OperationButton = document.querySelectorAll(".Operation");
 
