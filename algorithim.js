@@ -23,17 +23,17 @@
     calculate(operation){
 
         if(operation === '+'){
-            return Number(this.prevNumber) + Number(this.currentNumber);
+            return this.prevNumber + this.currentNumber;
         }
         else if(operation === '-'){
-            return Number(this.prevNumber) - Number(this.currentNumber);
+            return this.prevNumber - this.currentNumber;
         }
         else if(operation === '*'){
-            return Number(this.prevNumber) * Number(this.currentNumber);
+            return this.prevNumber * this.currentNumber;
         }
         else if(operation === '/'){
-            if(Number(this.currentNumber) !== 0){
-                return Number(this.prevNumber) / Number(this.currentNumber);
+            if((this.currentNumber) !== 0){
+                return this.prevNumber / this.currentNumber;
             }
             else{
                 console.log("Error");
