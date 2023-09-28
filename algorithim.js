@@ -56,41 +56,26 @@
     const calc = new calculator();
 
      const numberButton = document.querySelectorAll(".number");
-    // const OperationButton = document.querySelectorAll(".Operation");
+    const OperationButton = document.querySelectorAll(".Operation");
 
 
-    // OperationButton.addEventListener(".Operation").forEach(Operation => {Operation.addEventListener("click", Operation(val))}); //for each instance of class operation it adds click
+     OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
 
-    function Operation(){
-        const Op = document.querySelector(".Operation");
-        const val = Op.value;
-        if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){
+     function Operation(val){
+        if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
         const result = calc.calculate(val);
         display(result);
-        }
-        
-        
+     }
     }
 
-    numberButton.addEventListener(".number").forEach(number => { // adding for all. Taking all numbers from index.html
-        const append = document.querySelector(".number"); // It is only looking at line 14 on index.html
-        const val = append.value;
+    numberButton.addEventListener(".number").forEach(button => {button.addEventListener("click", myAppendFunction(val))});
+                                                                                   
+    function myAppendFunction(val){
        if(!isNaN(val)){
         calc.append(val);
         display(val);
        }
-    }
 
-
-    
-
-    function myAppendFunction(){
-        const append = document.querySelector(".number"); // It is only looking at line 14 on index.html
-        const val = append.value;
-       if(!isNaN(val)){
-        calc.append(val);
-        display(val);
-       }
     }
 
     function setClear(){
