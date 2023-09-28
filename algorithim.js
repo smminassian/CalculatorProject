@@ -5,7 +5,10 @@
         constructor(){
         this.prevNumber = '';
         this.currentNumber = '';
-        
+        this.prev1 = '';
+        this.current1 = '';
+        this.prev2 = '';
+        this.current2 = '';
         
     }
 
@@ -13,13 +16,14 @@
         this.prevNumber = '';
         this.currentNumber = '';
 
+
     }
 
     append(){
-        this.prevNumber = 
-        this.currentNumber = this.currentNumber + value.toString();
+        this.prevNumber = this.prev1.toString() + this.current1.toString();
+        this.currentNumber = this.prev2.toString() + this.current2.toString();
         //display(this.currentNumber);
-        return this.currentNumber;
+        return Number(this.currentNumber), Number(this.prevNumber);
     }
 
     calculate(operation){
