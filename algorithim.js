@@ -10,11 +10,12 @@
     clear(){
         this.prevNumber = '';
         this.currentNumber = '';
-        display(this.currentNumber);
+
     }
 
     append(value){
-        this.currentNumber = this.currentNumber.toString() + value.toString();
+        this.prevNumber = this.currentNumber.toString();
+        this.currentNumber = value.toString();
         display(this.currentNumber);
         return this.currentNumber;
     }
@@ -22,17 +23,17 @@
     calculate(operation){
 
         if(operation === '+'){
-            return this.prevNumber + this.currentNumber;
+            return Number(this.prevNumber) + Number(this.currentNumber);
         }
         else if(operation === '-'){
-            return this.prevNumber - this.currentNumber;
+            return Number(this.prevNumber) - Number(this.currentNumber);
         }
         else if(operation === '*'){
-            return this.prevNumber * this.currentNumber;
+            return Number(this.prevNumber) * Number(this.currentNumber);
         }
         else if(operation === '/'){
-            if(this.currentNumber !== 0){
-                return this.prevNumber / this.currentNumber;
+            if(Number(this.currentNumber) !== 0){
+                return Number(this.prevNumber) / Number(this.currentNumber);
             }
             else{
                 console.log("Error");
@@ -53,6 +54,10 @@
 }
     }
     const calc = new calculator();
+    calc.append(2);
+    calc.append(4);
+    console.log(calc.prevNumber);
+    console.log(calc.currentNumber);
 
      const numberButton = document.querySelectorAll(".number");
     const OperationButton = document.querySelectorAll(".Operation");
@@ -78,18 +83,14 @@
     }
 
     function setClear(){
-        const clearing = document.getElementById("clear");
-        const clear = clearing.value;
-        const input = document.querySelector("input");
-        input = clearing;
-
         calc.clear();
+        display(calc.currentNumber);
     }
 
     function display(value){
         const input = document.getElementById('inputBox');
         if(value != NaN){
-            input.value = value;
+            input.value = calc.currentNumber;
         }
     }
     
