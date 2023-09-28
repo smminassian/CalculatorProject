@@ -5,6 +5,8 @@
         constructor(){
         this.prevNumber = '';
         this.currentNumber = '';
+        
+        
     }
 
     clear(){
@@ -13,10 +15,10 @@
 
     }
 
-    append(value){
-        this.prevNumber = this.currentNumber.toString();
-        this.currentNumber = value.toString();
-        display(this.currentNumber);
+    append(){
+        this.prevNumber = 
+        this.currentNumber = this.currentNumber + value.toString();
+        //display(this.currentNumber);
         return this.currentNumber;
     }
 
@@ -59,40 +61,41 @@
     console.log(calc.prevNumber);
     console.log(calc.currentNumber);
 
-     const numberButton = document.querySelectorAll(".number");
-    const OperationButton = document.querySelectorAll(".Operation");
+    // const numberButton = document.querySelectorAll(".number");
+    // const OperationButton = document.querySelectorAll(".Operation");
 
 
-     OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
+    //  OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
 
-     function Operation(val){
-        if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
-        const result = calc.calculate(val);
-        display(result);
-     }
-    }
+    //  function Operation(val){
+    //     if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
+    //     const result = calc.calculate(val);
+    //     display(val);
+    //     display(result);
+    //  }
+    // }
 
-    numberButton.addEventListener(".number").forEach(button => {button.addEventListener("click", myAppendFunction(val))});
+    // numberButton.addEventListener(".number").forEach(button => {button.addEventListener("click", myAppendFunction(val))});
                                                                                    
-    function myAppendFunction(val){
-       if(!isNaN(val)){
-        calc.append(val);
-        display(val);
-       }
+    // function myAppendFunction(val){
+    //    if(!isNaN(val)){
+    //     calc.append(val);
+    //     display(val);
+    //    }
 
-    }
+    // }
 
-    function setClear(){
-        calc.clear();
-        display(calc.currentNumber);
-    }
+    // function setClear(){
+    //     calc.clear();
+    //     display(calc.currentNumber);
+    // }
 
-    function display(value){
-        const input = document.getElementById('inputBox');
-        if(value != NaN){
-            input.value = calc.currentNumber;
-        }
-    }
+    // function display(value){
+    //     const input = document.getElementById('inputBox');
+    //     if(value != NaN){
+    //         input.value = calc.currentNumber;
+    //     }
+    // }
     
     
     
