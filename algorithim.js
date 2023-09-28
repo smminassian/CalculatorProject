@@ -1,7 +1,7 @@
 
 
 
-//Tomorrow figure out how to get my operations working again
+//Tomorrow figure out how to get double digits, figure out how to get divide to work and get a equals button
 'use strict';
 
     class calculator{
