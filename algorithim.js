@@ -1,71 +1,75 @@
 
+
+
+//Tomorrow figure out how to get my operations working again
 'use strict';
 
     class calculator{
         constructor(){
         this.prevNumber = '';
         this.currentNumber = '';
-        this.prev1 = '';
-        this.current1 = '';
-        this.prev2 = '';
-        this.current2 = '';
-        
     }
 
     clear(){
         this.prevNumber = '';
         this.currentNumber = '';
 
-
     }
 
-    append(){
-        this.prevNumber = this.prev1.toString() + this.current1.toString();
-        this.currentNumber = this.prev2.toString() + this.current2.toString();
+    append(value){
+        this.prevNumber = this.currentNumber.toString() + this.prevNumber.toString();
+        this.currentNumber = this.currentNumber.toString() + value.toString()
         //display(this.currentNumber);
-        return Number(this.currentNumber), Number(this.prevNumber);
+        return this.currentNumber;
     }
 
     calculate(operation){
+        const prev = Number(this.prevNumber);
+        const current = Number(this.currentNumber);
 
-        if(operation === '+'){
-            return this.prevNumber + this.currentNumber;
-        }
-        else if(operation === '-'){
-            return this.prevNumber - this.currentNumber;
-        }
-        else if(operation === '*'){
-            return this.prevNumber * this.currentNumber;
-        }
-        else if(operation === '/'){
-            if((this.currentNumber) !== 0){
-                return this.prevNumber / this.currentNumber;
+        if(!isNaN(prev) && !isNaN(current)){
+             if(operation === '+'){
+            return prev + current;
+            }
+            else if(operation === '-'){
+            return prev - current;
+          }
+            else if(operation === '*'){
+            return prev * current;
+             }
+            else if(operation === '/'){
+            if((current) !== 0){
+                return prev / current;
             }
             else{
                 console.log("Error");
             }
-        }
-        else if(operation === '++'){
+           }
+            else if(operation === '++'){
             console.log("Error");
-        }
-        else if(operation === '--'){
+            }
+            else if(operation === '--'){
             console.log("Error");
-        }
-        else if(operation === '**'){
+         }
+            else if(operation === '**'){
             console.log("Error");
-        }
-        else if(operation === '//'){
+         }
+            else if(operation === '//'){
             console.log("Error");
+         }
+      
     }
+   }
 }
-    }
+    
     const calc = new calculator();
-    calc.append(2);
-    calc.append(2)
-    calc.append(4)
-    calc.append(4);
-    console.log(calc.prevNumber);
-    console.log(calc.currentNumber);
+
+    calc.append(8);
+    calc.append(7);
+    console.log(calc.calculate('+'));
+
+    
+    
 
     // const numberButton = document.querySelectorAll(".number");
     // const OperationButton = document.querySelectorAll(".Operation");
@@ -74,7 +78,7 @@
     //  OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
 
     //  function Operation(val){
-    //     if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  
+    //     if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
     //     const result = calc.calculate(val);
     //     display(val);
     //     display(result);
