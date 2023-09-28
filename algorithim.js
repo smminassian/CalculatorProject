@@ -61,6 +61,8 @@
     }
     const calc = new calculator();
     calc.append(2);
+    calc.append(2)
+    calc.append(4)
     calc.append(4);
     console.log(calc.prevNumber);
     console.log(calc.currentNumber);
@@ -72,7 +74,7 @@
     //  OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
 
     //  function Operation(val){
-    //     if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
+    //     if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  
     //     const result = calc.calculate(val);
     //     display(val);
     //     display(result);
