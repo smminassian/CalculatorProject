@@ -14,10 +14,9 @@
     }
 
     append(value){
-        this.prevNumber = this.currentNumber
-        this.currentNumber = Number(value);
+        this.currentNumber = this.currentNumber.toString() + value.toString();
         display(this.currentNumber);
-        return this.currentNumber; 
+        return this.currentNumber;
     }
 
     calculate(operation){
