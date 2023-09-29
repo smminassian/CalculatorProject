@@ -55,13 +55,11 @@
 
 
      function Operation(val){
-        if(val === '+' || '-' || '*' || '/'){  
+        if(val === '+' || '-' || '*' || '/' || '='){  
         const result = calc.calculate(val);
+        display(result)
         
      }
-        else if (val === '='){
-            display(result);
-        }
     }
     
     numberButton.addEventListener(".number").forEach(button => {button.addEventListener("click", myAppendFunction(val))});
