@@ -51,16 +51,19 @@
     const OperationButton = document.querySelectorAll(".Operation");
 
 
-     OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
+     OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", setOperation(val))}); 
 
 
-     function Operation(val){
+     function setOperation(val){
         if(val === '+' || '-' || '*' || '/'){  
         const result = calc.calculate(val);
-        display(result);
+        
      }
+        else if (val === '='){
+            display(result);
+        }
     }
-
+    
     numberButton.addEventListener(".number").forEach(button => {button.addEventListener("click", myAppendFunction(val))});
                                                                                    
     function myAppendFunction(val){
