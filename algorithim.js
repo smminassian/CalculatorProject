@@ -13,11 +13,9 @@
     clear(){
         this.prevNumber = '';
         this.currentNumber = '';
-
     }
 
     append(value){
-        this.prevNumber = this.prevNumber.toString() + this.currentNumber.toString();
         this.currentNumber = this.currentNumber.toString() + value.toString()
         display(this.currentNumber);
         return this.currentNumber;
@@ -61,12 +59,16 @@
     
     const calc = new calculator();
 
+
+    console.log(calc.calculate('+'));
+
     
     const numberButton = document.querySelectorAll(".number");
     const OperationButton = document.querySelectorAll(".Operation");
 
 
      OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
+
 
      function Operation(val){
         if(val === '+' || '-' || '*' || '/' || '--' || '++' || '**' || '//'){  //for each instance of class operation it adds click
