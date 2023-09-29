@@ -16,7 +16,8 @@
     }
 
     append(value){
-        this.currentNumber = this.currentNumber.toString() + value.toString()
+        this.prevNumber = this.currentNumber.toString();
+        this.currentNumber = value.toString()
         display(this.currentNumber);
         return this.currentNumber;
     }
