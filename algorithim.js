@@ -41,8 +41,7 @@
            }
         }
     }
-   }
-
+}
     
     const calc = new calculator();
 
@@ -55,10 +54,10 @@
 
 
      function Operation(val){
-        if(val === '+' || '-' || '*' || '/' || '='){  
-        const result = calc.calculate(val);
-        display(result)
         
+        if(val === '+' || '-' || '*' || '/'){  
+            const result = calc.calculate(val);
+            display(result)
      }
     }
     
