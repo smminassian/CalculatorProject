@@ -1,7 +1,6 @@
 
 
 
-//Tomorrow figure out how to get double digits, figure out how to get divide to work and get a equals button
 'use strict';
 
     class calculator{
@@ -54,10 +53,11 @@
 
 
      function Operation(val){
-        
         if(val === '+' || '-' || '*' || '/'){  
             const result = calc.calculate(val);
-            display(result)
+                if(val === '='){
+                    display(result);
+                }
      }
     }
     
