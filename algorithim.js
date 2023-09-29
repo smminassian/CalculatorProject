@@ -1,6 +1,3 @@
-
-
-
 'use strict';
 
     class calculator{
@@ -55,6 +52,7 @@
      function Operation(val){
         if(val === '+' || '-' || '*' || '/'){  
             const result = calc.calculate(val);
+            display(result);
                 if(val === '='){
                     display(result);
                 }
