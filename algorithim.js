@@ -51,10 +51,10 @@
     const OperationButton = document.querySelectorAll(".Operation");
 
 
-     OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", setOperation(val))}); 
+     OperationButton.addEventListener(".Operation").forEach(button => {button.addEventListener("click", Operation(val))}); 
 
 
-     function setOperation(val){
+     function Operation(val){
         if(val === '+' || '-' || '*' || '/'){  
         const result = calc.calculate(val);
         
