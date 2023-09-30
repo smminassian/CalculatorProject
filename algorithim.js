@@ -5,8 +5,8 @@
         constructor(){
         this.prevNumber = '';
         this.currentNumber = '';
-        this.operation=''
-        this.result=''
+        this.operation = '';
+        this.result = '';
     }
 
     clear(){
