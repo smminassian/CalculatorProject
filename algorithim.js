@@ -96,7 +96,7 @@
     OperationButton.forEach(button => {button.addEventListener("click", event => {calc.Operation(event)})},false);
     
     
-    for(var i =0; i<numberButton.length; i++)
+    for(var i = 0; i<numberButton.length; i++)
     {
         numberButton[i].addEventListener("click", event => {calc.myAppendFunction(event)},false);
     }
