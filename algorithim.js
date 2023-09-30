@@ -248,7 +248,7 @@ const calc = new calculator();
      }
 
 
- window.addEventListener('DOMContentLoaded', (event) => {
+ 
 
    
    	
@@ -256,7 +256,7 @@ const calc = new calculator();
     const numberButton = document.querySelectorAll(".number");
     const OperationButton = document.querySelectorAll(".Operation");
 
-    OperationButton.forEach(button => {button.addEventListener("click", event => {Operation(event)},false); 
+    OperationButton.forEach(button => {button.addEventListener("click", event => {Operation(event)})},false);
     
     //numberButton.forEach(button => {button.addEventListener("click", myAppendFunction(button.value))});
 
@@ -267,11 +267,9 @@ const calc = new calculator();
     }
     document.getElementById("clear").addEventListener("click", event=> {setClear()}, false);
 
-   
- });
+
     
 
- });
 
 
 
