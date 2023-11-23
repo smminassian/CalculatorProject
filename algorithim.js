@@ -27,7 +27,7 @@
 
       let result = 0
               
-         if(this.operation === '+'){
+        if(this.operation === '+'){
             result= Number(this.prevNumber) + Number(this.currentNumber);
         }
         else if(this.operation === '-'){
